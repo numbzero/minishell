@@ -13,7 +13,7 @@ char	*read_line(void)
 	bufsize = 2;
 	while ((read(0, &ch, 1) > 0) && ch != '\n')
 	{
-		*(buffer + position) = ch;
+		buffer[position] = ch;
 		buffer = (char *)realloc(buffer, bufsize);
 		position++;
 		bufsize++;

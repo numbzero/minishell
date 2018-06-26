@@ -21,6 +21,7 @@ int			is_blank(char c);
 int			execute(char **args, char **envp);
 int			builtin_exit(void);
 int			builtin_cd(char **args, char **envp);
-int			launch(char **args);
+int			launch(char **args, char **envp);
+char        **ft_strsplit(const char *str, char c);
 
 #endif

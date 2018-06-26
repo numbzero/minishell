@@ -4,8 +4,8 @@ int		execute(char **args, char **envp)
 {
 	if (args[0] == NULL)
 		return (1);
-	if (strcmp(args[0], "cd") == 0)
-		return (builtin_cd(args, envp));
+	//if (strcmp(args[0], "cd") == 0)
+	//	return (builtin_cd(args, envp));
 	// if (strcmp(args[0], "echo") == 0)
 	// 	return (builtin_echo(args));
 	// if (strcmp(args[0], "setenv") == 0)
@@ -16,14 +16,14 @@ int		execute(char **args, char **envp)
 		return (builtin_exit());
 	// if (strcmp(args[0], "env") == 0)
 	// 	return (builtin_env(args));
-	return (launch(args));
+	return (launch(args, envp));
 }
 
 int		builtin_exit(void)
 {
 	return (0);
 }
-
+/*
 int		builtin_cd(char **args, char **envp)
 {
 	int		i;
@@ -47,4 +47,4 @@ int		builtin_cd(char **args, char **envp)
     	}
     }
 	return 1;
-}
+}*/
