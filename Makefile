@@ -8,14 +8,23 @@ SRC = main.c \
 	  split_line.c \
 	  execute.c \
 	  launch.c \
-	  ft_strsplit.c
+	  ft_strsplit.c \
+	  launch_command.c \
+	  is_file.c \
+	  is_dir.c \
+	  builtin_env.c
+
 OBJ = main.o \
 	  read_line.o \
 	  string.o \
 	  split_line.o \
 	  execute.o \
 	  launch.o \
-	  ft_strsplit.o
+	  ft_strsplit.o \
+	  launch_command.o \
+	  is_file.o \
+	  is_dir.o \
+	  builtin_env.o
 
 NAME = minishell
 

@@ -13,11 +13,11 @@ int	main(void)
 	{
 		ft_putstr("$> ");
 		line = read_line();
-		printf("read_line => %s\n", line);
+		//printf("read_line => %s\n", line);
 		args = split_line(line);
-		printf("splited_line:\n");
-		for (int i = 0; args[i] != NULL; i++)
-			printf("\t--> word[%d] = %s\n", i, args[i]);
+		//printf("splited_line:\n");
+		//for (int i = 0; args[i] != NULL; i++)
+		//	printf("\t--> word[%d] = %s\n", i, args[i]);
 		status = execute(args, environ);
 		free(line);
 		free(args);
