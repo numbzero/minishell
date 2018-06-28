@@ -17,12 +17,12 @@ static char	*get_path(char **envp)
 	}
 	return (path);
 }
-/*
+
 static void	check(char **paths, char *bin)
 {
 	for (int i = 0; paths[i] != NULL; i++)
 		printf("\t\tpath[%d] = %s/\%s\n", i , paths[i], bin);
-}*/
+}
 
 static char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -77,9 +77,9 @@ int			launch(char **args, char **envp)
 
 	path = get_path(envp);
 	paths = ft_strsplit((path + 5), ':');
-	//check(paths, args[0]);
+	check(paths, args[0]);
 	command = get_right_path(args[0], paths);
-	//printf("\tcommand => %s\n", command);
+	printf("\tcommand => %s\n", command);
 	if (command == NULL)
 		printf("-minishell: %s: command not found\n", args[0]);
 	else
