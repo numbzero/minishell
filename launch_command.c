@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-void	launch_command(char *command, char **args, char **envp)
+int	launch_command(char *command, char **args, char **envp)
 {
 	pid_t	child_pid;
 	int		stat;
@@ -12,6 +12,9 @@ void	launch_command(char *command, char **args, char **envp)
 		exit(1);
 	}
 	else
+	{
 		waitpid(child_pid, &stat, WUNTRACED);
-	return ;
+		while (!WIFEXITED(stat) && !WIFSIGNALED(stat));
+	}	
+	return (1);
 }

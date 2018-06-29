@@ -20,10 +20,15 @@ int			count_words(char *str);
 int			is_blank(char c);
 int			execute(char **args, char **envp);
 int			launch(char **args, char **envp);
+char    	*get_value_variable(char *variable, char **envp);
 char        **ft_strsplit(const char *str, char c);
-void    	launch_command(char *command, char **args, char **envp);
+int	    	launch_command(char *command, char **args, char **envp);
 int			is_dir(char *str);
 int			is_file(char *str);
 int			builtin_env(char **envp);
+int			builtin_setenv(char *variable, char *value, char **envp);
+int     	builtin_unsetenv(char *variable, char **envp);
+int			builtin_cd(char *directory, char **envp);
+char        *get_value_of_variable(char *variable);
 
 #endif
